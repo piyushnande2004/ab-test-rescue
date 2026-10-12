@@ -6,7 +6,7 @@ A tool that checks whether an A/B test result can be trusted before a company sh
 A product manager claims a new checkout page lifted conversion by **+9.3%**. I audited
 the test and found the result can't be trusted.
 
-![Health report on the sample test](C:\Users\victus\OneDrive\Desktop\AB-Test-resuce\screeshots\sample_fail.png)
+![Health report on the sample test](screenshots/sample_fail.png)
 
 ## What the audit found
 - **Sample Ratio Mismatch:** treatment got 48.9% of users instead of 50%, so randomization was broken.
@@ -17,7 +17,7 @@ the test and found the result can't be trusted.
 
 **Verdict: do not ship, fix the assignment bug and re-run.**
 
-![Segment results](C:\Users\victus\OneDrive\Desktop\AB-Test-resuce\screeshots\sample segment.png)
+![Segment results](screenshots/sample_segments.png)
 
 ## Three datasets, three verdicts
 | Dataset | Result | Verdict |
@@ -27,15 +27,15 @@ the test and found the result can't be trusted.
 | FoodRush promo test | All checks pass, +10.5% lift | Ship |
 | PayBank loan banner | CI from -14.6% to +12.8% | Inconclusive |
 
-![StreamFlix broken test](C:\Users\victus\OneDrive\Desktop\AB-Test-resuce\screeshots\stream_flix_fail.png)
-![FoodRush clean test](C:\Users\victus\OneDrive\Desktop\AB-Test-resuce\screeshots\foodrush_pass.png)
+![StreamFlix broken test](screenshots/stream_flix_fail.png)
+![FoodRush clean test](screenshots/foodrush_pass.png)
 
 ## A lesson about segments
 Even after multiple-testing correction, some segments look significant by chance
 (Nagpur, Pune and android in FoodRush all had the same true lift). I treat segment
 results as leads for a follow-up test, not conclusions.
 
-![FoodRush segments]C:\Users\victus\OneDrive\Desktop\AB-Test-resuce\screeshots\foodrush_segments.png)
+![FoodRush segments]screenshots/foodrush_segments.png)
 
 ## How to run
     pip install -r requirements.txt
